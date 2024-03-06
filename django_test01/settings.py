@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-yk#nwnj21p80ziykr16_jia257#j)0%q!bs264@1v3hz$#8sk@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','127.0.0.1','django-test01-production.up.railway.app']
 
 
 # Application definition
@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'django_test01.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'g-De4-4**a324-g1D*e*62acBa2-C3eA',
+        'HOST': 'monorail.proxy.rlwy.net',  # Par défaut, PostgreSQL est souvent sur localhost
+        'PORT': '13168',           # Laissez vide pour utiliser le port par défaut
     }
 }
 
